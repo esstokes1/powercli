@@ -218,7 +218,7 @@ foreach ($xmlDc in $vcconfig.vcenter.datacenter) {
     $cluster = get-cluster -server $vcserver -location $datacenter -name $($xmlCluster.name) -wa silentlycontinue -ea silentlycontinue
     if ($cluster -eq $null) {
       write-host "adding cluster $($xmlCluster.name) to $($datacenter.name)" -foregroundcolor "cyan"
-      $cluster = new-cluster -server $vcserver -location $datacenter -name $($xmlCluster.name) -evcMode $($xmlCluster.evcMode)  -confirm:$false
+      $cluster = new-cluster -server $vcserver -location $datacenter -name $($xmlCluster.name) -confirm:$false
     }
 
     # set EVC mode if needed
