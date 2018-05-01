@@ -7,7 +7,6 @@
 ## Contributor
 
     Eric Stokes
-    Twitter - @esstokes1
 
 ## Contents
 
